@@ -18,20 +18,23 @@ const imageData = ()=>{
     {
       id:4,
       img:elephant
-    }
+    },
+   
   ]
   return data;
 }
 
 function App() {
+  // Get image data
+  const images = imageData();
+
   return (
-    <div className="App">
-      <h1>Elephant Images</h1>
-      <div className="image-container">
-        {imageData().map((item) => (
-          <img key={item.id} src={item.img} alt={`Elephant ${item.id}`} />
-        ))}
-      </div>
+    <div className="image-gallery">
+      {images.map((img) => (
+        <div key={img.id} className="image-container">
+          <img src={img.img} alt={`img-${img.id}`} className="image" />
+        </div>
+      ))}
     </div>
   );
 }
