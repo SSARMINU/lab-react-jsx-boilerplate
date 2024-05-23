@@ -1,1 +1,22 @@
-/* add your styles here */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 16px;  
+    padding: 16px;  
+    justify-content: center;  
+  }
+  
+  .image-container {
+    flex: 0 1 calc(50% - 16px);  
+    box-sizing: border-box;  
+  }
+  
+  .image {
+    width: 100%; 
+    height: auto;  
+    display: block;  
+    border: 2px solid #ccc;  
+    border-radius: 8px; 
+    background-color: #f9f9f9;  
+  }
+  
